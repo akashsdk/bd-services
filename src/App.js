@@ -12,8 +12,9 @@ import Services from './Screen/Services';
 function App() {
   return (
     <BrowserRouter>
+    <Header />
       <div className="App">
-        <Header />
+        
         <Routes>
           <Route path="*" element={<ErrorPage />} />
           <Route path="/" element={<Home />} />
