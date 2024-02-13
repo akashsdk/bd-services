@@ -1,5 +1,28 @@
 .Header-Body{
     height: 80px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.Header-Box1{
+    flex: 1;
     background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Header-Box2{
+    flex: 2.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Header-Box3{
+    flex: .8;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
