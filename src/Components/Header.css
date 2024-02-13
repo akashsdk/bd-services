@@ -1,39 +1,120 @@
-.Header-Body{
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+.Header-Body {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.Header-Link{
-    text-decoration: none;
-    margin-left: 25px;
+.Header-Link {
+  text-decoration: none;
+  margin-left: 25px;
+  color: #006a4e;
 }
-.Header-Text{
-    font-size: 20px;
-    font-weight: 700;
-    color: 	#f42a41;
+.Header-Link:hover {
+  text-decoration: none;
+  margin-left: 25px;
+  color: #f42a41;
 }
-.Header-Box1{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Header-Text {
+  font-size: 20px;
+  font-weight: 700;
 }
-.Header-Icon{
-    height: 60px;
+.Header-Text {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
 }
-.Header-Box2{
-    flex: 2.2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Header-Text.red {
+  color: #f42a41;
 }
-.Header-Box3{
-    flex: .8;
-    background-color: aquamarine;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.Header-Box1 {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header-Logo {
+  height: 60px;
+}
+.Header-Box2 {
+  flex: 2.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header-Box3 {
+  flex: 0.8;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* dropdown menu */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  color: #006a4e;
+  cursor: pointer;
+}
+.dropdown:hover {
+  color: #f42a41;
+}
+.dropdown-content {
+  display: none;
+  height: 170px;
+  width: 250px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 220px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.Header-Icon2 {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.Header-Icon1 {
+  margin-top: 5px;
+  margin-left: 5px;
+  display: none;
+}
+.dropdown:hover .Header-Icon1 {
+  display: block;
+}
+.dropdown:hover .Header-Icon2 {
+  display: none;
+}
+.dropdown-content-Link {
+  height: 40px;
+  width: 100%;
+  background-color: #edfffa;
+  color: #006a4e;
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.dropdown-content-Link:hover {
+  color: #ff7081;
+}
+.dropdown-content-Text {
+  font-weight: 700;
+  font-size: 16px;
 }
