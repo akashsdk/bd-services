@@ -8,17 +8,12 @@ import {
   MenuOutlined,
   UpOutlined,
   DownOutlined,
+  SettingOutlined,
+  AppstoreOutlined,
 } from "@ant-design/icons";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
+  // Header Colour
 
   const storedColors = localStorage.getItem("selectedTextColors");
   const [textColors, setTextColors] = useState(
@@ -39,6 +34,15 @@ export default function Header() {
   useEffect(() => {
     localStorage.setItem("selectedTextColors", JSON.stringify(textColors));
   }, [textColors]);
+
+  // for Box-3
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="Header-Body">
@@ -86,20 +90,63 @@ export default function Header() {
           </div>
         </div>
 
-        <Link className="Header-Link" onClick={() => handleTextClick(2)}>
+        <Link
+          className="Header-Link"
+          to="/AboutUs"
+          onClick={() => handleTextClick(2)}
+        >
           <p className={`Header-Text ${textColors[2]}`}>About Us</p>
         </Link>
 
-        <Link className="Header-Link" onClick={() => handleTextClick(3)}>
+        <Link
+          className="Header-Link"
+          to="/Contact"
+          onClick={() => handleTextClick(3)}
+        >
           <p className={`Header-Text ${textColors[3]}`}>Contact</p>
         </Link>
 
-        <div>
-        <Switch checkedChildren="ENG" unCheckedChildren="BN" defaultChecked />
+        <div style={{ marginLeft: "20px" }}>
+          <Switch checkedChildren="ENG" unCheckedChildren="BN" defaultChecked />
         </div>
       </div>
 
-      <div className="Header-Box3">profile</div>
+      <div className="Header-Box3">
+        <button className="Header-Box3-Button">
+          <SettingOutlined className="Header-Box3-Icon" />
+        </button>
+
+        <button className="Header-Box3-Button">
+          <AppstoreOutlined className="Header-Box3-Icon" />
+        </button>
+
+        <button className="Header-Box3-Button" onClick={showDrawer}>
+          <img
+            className="Header-Box3-Img"
+            alt=""
+            src="https://www.flagcolorcodes.com/data/flag-of-bangladesh.png"
+          />
+        </button>
+      </div>
+      <box>
+        <Drawer
+          placement="right"
+          closeIcon={false}
+          open={open}
+          key="right"
+          width={500}
+          mask={{height:'500px'}}
+          style={{
+            height:'500px', marginTop:'100px', boxShadow:'none'
+          }}
+        >
+          <div className="Header-Drawer-Body">
+            <div>
+              <button onClick={onClose}>close</button>
+            </div>
+          </div>
+        </Drawer>
+      </box>
     </div>
   );
 }
