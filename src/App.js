@@ -8,7 +8,7 @@ import Footer from './Components/Footer';
 import AboutUs from './Screen/AboutUs';
 import Contacts from './Screen/Contacts';
 import Services from './Screen/Services';
-import Profile from "./Components/Profile";
+import Profile from "./Screen/Profile";
 import Settings from './Components/Settings';
 
 function App() {

@@ -1,0 +1,96 @@
+.Profile-Body {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+/* Left-Side */
+.Profile-Body-Left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Profile-Left-Box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Profile-Title-Text {
+  flex: 2;
+  font-size: 28px;
+  font-weight: 600;
+  color: #006a4e;
+}
+.Profile-Title-Link{
+  text-decoration: none;
+  color: #f66e7e;
+}
+.Profile-Title-Link:hover{
+  color: #f42a41;
+}
+.Profile-Img {
+  height: 250px;
+  width: 250px;
+  border-radius: 125px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.Profile-Change-Button {
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #cdfcf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #006a4e;
+  cursor: pointer;
+}
+.Profile-Change-Button:hover {
+  border: 2px solid #006a4e;
+}
+.Profile-Remove-Button {
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #f9ccd1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-left: 20px;
+  color: #f42a41;
+  cursor: pointer;
+}
+.Profile-Remove-Button:hover {
+  border: 2px solid #f42a41;
+}
+.Profile-Button-Icon {
+  font-size: 20px;
+}
+.Profile-Button-Text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+.Profile-Name-Text{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+/* Right-Side */
+.Profile-Body-Right{
+    flex: 1;
+    background-color: beige;
+}
