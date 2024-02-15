@@ -119,40 +119,22 @@
 }
 
 /* box 3 */
-.Header-Box3-Button{
-    background-color: transparent;
-    border: none;
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 10px;
+.Header-Box3-Link{
+    margin-right: 20px;
+    
 }
 .Header-Box3-Icon{
     font-size: 30px;
     color: #006a4e;
 }
-.Header-Box3-Button:hover .Header-Box3-Icon{
+.Header-Box3-Icon.red{
+  color: #f42a41;
+}
+.Header-Box3-Link:hover .Header-Box3-Icon{
     color: #f42a41;
 }
 .Header-Box3-Img{
     height: 50px;
     width: 50px;
     border-radius: 25px;
-}
-.Header-Box3-Button:hover .Header-Box3-Img{
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-
-
-
-
-
-
-
-.Header-Drawer1{
-    height: 500px;
 }

@@ -5,7 +5,6 @@ import Logo from "../Icon/Header logo2 .png";
 import { Link } from "react-router-dom";
 import { Button, Drawer, Menu, Switch } from "antd";
 import {
-  MenuOutlined,
   UpOutlined,
   DownOutlined,
   SettingOutlined,
@@ -28,7 +27,6 @@ export default function Header() {
     );
     setTextColors(updatedColors);
     localStorage.setItem("selectedTextColors", JSON.stringify(updatedColors));
-    setOpen(false);
   };
 
   useEffect(() => {
@@ -47,7 +45,7 @@ export default function Header() {
   return (
     <div className="Header-Body">
       <div className="Header-Box1">
-        <Link to="/" onClick={() => handleTextClick(0)}>
+        <Link to="/" onClick={() => handleTextClick(4)}>
           <img className="Header-Logo" src={Logo} alt="" />
         </Link>
       </div>
@@ -112,41 +110,23 @@ export default function Header() {
       </div>
 
       <div className="Header-Box3">
-        <button className="Header-Box3-Button">
-          <SettingOutlined className="Header-Box3-Icon" />
-        </button>
+        <Link
+          className="Header-Box3-Link"
+          to="/Settings"
+          onClick={() => handleTextClick(0)}
+        >
+          <SettingOutlined  className={`Header-Box3-Icon ${textColors[0]}`}/>
+        </Link>
 
-        <button className="Header-Box3-Button">
-          <AppstoreOutlined className="Header-Box3-Icon" />
-        </button>
-
-        <button className="Header-Box3-Button" onClick={showDrawer}>
+        <Link to="/Profile" onClick={() => handleTextClick(5)}>
           <img
             className="Header-Box3-Img"
             alt=""
             src="https://www.flagcolorcodes.com/data/flag-of-bangladesh.png"
           />
-        </button>
+        </Link>
       </div>
-      <box>
-        <Drawer
-          placement="right"
-          closeIcon={false}
-          open={open}
-          key="right"
-          width={500}
-          mask={{height:'500px'}}
-          style={{
-            height:'500px', marginTop:'100px', boxShadow:'none'
-          }}
-        >
-          <div className="Header-Drawer-Body">
-            <div>
-              <button onClick={onClose}>close</button>
-            </div>
-          </div>
-        </Drawer>
-      </box>
+      <box></box>
     </div>
   );
 }
