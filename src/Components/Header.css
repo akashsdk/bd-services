@@ -6,6 +6,16 @@
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.Header-Mobile {
+  display: none;
+}
+.Header-Dextop {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Header-Link {
   text-decoration: none;
   margin-left: 25px;
@@ -119,22 +129,53 @@
 }
 
 /* box 3 */
-.Header-Box3-Link{
-    margin-right: 20px;
-    
+.Header-Box3-Link {
+  margin-right: 20px;
 }
-.Header-Box3-Icon{
-    font-size: 30px;
-    color: #006a4e;
+.Header-Box3-Icon {
+  font-size: 30px;
+  color: #006a4e;
 }
-.Header-Box3-Icon.red{
+.Header-Box3-Icon.red {
   color: #f42a41;
 }
-.Header-Box3-Link:hover .Header-Box3-Icon{
-    color: #f42a41;
+.Header-Box3-Link:hover .Header-Box3-Icon {
+  color: #f42a41;
 }
-.Header-Box3-Img{
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
+.Header-Box3-Img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+  .Header-Body {
+    height: 70px;
+  }
+  .Header-Mobile {
+    width: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Header-Dextop {
+    display: none;
+  }
+  .Header-M-Div {
+    flex: 2;
+  }
+  .Header-M-Div2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Header-Logo {
+    height: 45px;
+  }
+  .Header-M-Icon{
+    font-size: 25px;
+    margin-left: 50px;
+  }
 }
