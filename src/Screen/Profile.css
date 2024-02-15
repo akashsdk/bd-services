@@ -14,7 +14,7 @@
   align-items: center;
   flex-direction: column;
 }
-.Profile-Left-Box{
+.Profile-Left-Box {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -26,11 +26,11 @@
   font-weight: 600;
   color: #006a4e;
 }
-.Profile-Title-Link{
+.Profile-Title-Link {
   text-decoration: none;
   color: #f66e7e;
 }
-.Profile-Title-Link:hover{
+.Profile-Title-Link:hover {
   color: #f42a41;
 }
 .Profile-Img {
@@ -40,7 +40,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .Profile-Change-Button {
-  height: 45px;
+  height: 35px;
   background-color: transparent;
   border: 2px solid #cdfcf0;
   display: flex;
@@ -54,7 +54,7 @@
   border: 2px solid #006a4e;
 }
 .Profile-Remove-Button {
-  height: 45px;
+  height: 35px;
   background-color: transparent;
   border: 2px solid #f9ccd1;
   display: flex;
@@ -75,22 +75,28 @@
   font-size: 16px;
   margin-left: 10px;
 }
-.Profile-Name-Text{
+.Profile-Name-Text {
   font-size: 25px;
   font-weight: 500;
+  margin-top: 100px;
+}
+.Profile-Left-Link {
+  text-decoration: none;
+  color: #006a4e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Profile-Left-Link2 {
+  text-decoration: none;
+  color: #f42a41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
 /* Right-Side */
-.Profile-Body-Right{
-    flex: 1;
-    background-color: beige;
+.Profile-Body-Right {
+  flex: 1;
+  background-color: beige;
 }

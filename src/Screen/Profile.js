@@ -60,7 +60,7 @@ export default function Profile() {
             }}
           >
             <Tooltip title="LogOut" color="#f42a41">
-              <Link className="Profile-Title-Link">
+              <Link className="Profile-Title-Link" to="/Log-In">
                 <LogoutOutlined style={{ fontSize: "25px" }} />
               </Link>
             </Tooltip>
@@ -98,10 +98,17 @@ export default function Profile() {
 
           <p className="Profile-Name-Text">Md Tasnim Shahriar Akash</p>
 
-          <Link>
-          <ContactsOutlined />
-          <p>Personal info</p>
-          </Link>
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
+            <Link to="/Personal-Info" className="Profile-Left-Link">
+              <ContactsOutlined className="Profile-Button-Icon" />
+              <p className="Profile-Button-Text">Personal info</p>
+            </Link>
+
+            <Link to="/Log-In" className="Profile-Left-Link2">
+              <LogoutOutlined className="Profile-Button-Icon" />
+              <p className="Profile-Button-Text">Sign out</p>
+            </Link>
+          </div>
           
         </div>
       </div>

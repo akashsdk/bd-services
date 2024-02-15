@@ -10,6 +10,8 @@ import Contacts from './Screen/Contacts';
 import Services from './Screen/Services';
 import Profile from "./Screen/Profile";
 import Settings from './Components/Settings';
+import PersonalInfo from './Components/PersonalInfo';
+import LogIn from './Components/LogIn';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Settings" element={<Settings />} />
+          <Route path="/Personal-Info" element={<PersonalInfo />} />
+          <Route path="/Log-In" element={<LogIn />} />
         </Routes>
       </div>
     </BrowserRouter>
