@@ -3,14 +3,28 @@ import "./Header.css";
 
 import Logo from "../Icon/Header logo2 .png";
 import PImg from "../Image/Profile.png";
+
 import { Link } from "react-router-dom";
-import { Button, Drawer, Menu, Switch } from "antd";
+import { Drawer, Menu, Switch } from "antd";
 import {
   UpOutlined,
   DownOutlined,
   SettingOutlined,
   PicLeftOutlined,
+  HomeOutlined,
+  AppstoreOutlined,
+  DesktopOutlined,
+  CustomerServiceOutlined,
 } from "@ant-design/icons";
+
+function getItem(label, key, icon, children) {
+  return {
+    key,
+    icon,
+    children,
+    label,
+  };
+}
 
 export default function Header() {
   // Header Colour
@@ -28,6 +42,7 @@ export default function Header() {
     );
     setTextColors(updatedColors);
     localStorage.setItem("selectedTextColors", JSON.stringify(updatedColors));
+    setOpen(false);
   };
 
   useEffect(() => {
@@ -42,6 +57,64 @@ export default function Header() {
   const onClose = () => {
     setOpen(false);
   };
+
+  // Menu
+  const items = [
+    getItem(
+      <Link onClick={onClose} to="/">
+        Home
+      </Link>,
+      "1",
+      <HomeOutlined />
+    ),
+    getItem("Services", "sub1", <AppstoreOutlined />, [
+      getItem(
+        <Link onClick={onClose} to="/team-augmentation">
+          Team Augmentation
+        </Link>,
+        "2"
+      ),
+      getItem(
+        <Link onClick={onClose} to="/project-development">
+          Project Development
+        </Link>,
+        "3"
+      ),
+      getItem(
+        <Link onClick={onClose} to="/mvp-services">
+          MVP Services
+        </Link>,
+        "4"
+      ),
+      getItem(
+        <Link onClick={onClose} to="/offshore-development">
+          Offshore Development
+        </Link>,
+        "5"
+      ),
+    ]),
+    getItem(
+      <Link onClick={onClose} to="/Settings">
+        Settings
+      </Link>,
+      "6",
+      <SettingOutlined />
+    ),
+    getItem(
+      <Link onClick={onClose} to="/AboutUs">
+        About Us
+      </Link>,
+      "7",
+      <DesktopOutlined />
+    ),
+    getItem(
+      <Link onClick={onClose} to="/Contact">
+        Contact Us
+      </Link>,
+      "8",
+      <CustomerServiceOutlined />
+    ),
+  ];
 
   return (
     <div className="Header-Body">
@@ -134,7 +207,7 @@ export default function Header() {
       {/* Header-Mobile */}
       <div className="Header-Mobile">
         <div className="Header-M-Div">
-          <PicLeftOutlined onClick={showDrawer} className="Header-M-Icon"/>
+          <PicLeftOutlined onClick={showDrawer} className="Header-M-Icon" />
         </div>
         <div className="Header-M-Div2">
           <Link to="/" onClick={() => handleTextClick(4)}>
@@ -145,13 +218,36 @@ export default function Header() {
       <box>
         <Drawer
           placement="left"
-          title={<div>n</div>}
+          width={500}
           onClose={onClose}
           open={open}
+          extra={
+            <div className="Header-Box3">
+              <Switch
+                checkedChildren="ENG"
+                unCheckedChildren="BN"
+                defaultChecked
+                style={{
+                  marginRight: "10px",
+                }}
+              />
+
+              <Link to="/Profile" onClick={() => handleTextClick(5)}>
+                <img className="Header-Box3-Img" alt="" src={PImg} />
+              </Link>
+            </div>
+          }
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Menu
+            style={{
+              width: "100%",
+            }}
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            mode="inline"
+            theme="light"
+            items={items}
+          />
         </Drawer>
       </box>
     </div>

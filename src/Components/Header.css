@@ -174,8 +174,19 @@
   .Header-Logo {
     height: 45px;
   }
-  .Header-M-Icon{
+  .Header-M-Icon {
     font-size: 25px;
     margin-left: 50px;
+  }
+  .Header-Box3 {
+    flex: auto;
+  }
+  .Header-Box3-Icon {
+    font-size: 25px;
+  }
+  .Header-Box3-Img {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
   }
 }
