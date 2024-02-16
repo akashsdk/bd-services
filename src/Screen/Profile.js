@@ -15,7 +15,7 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-import IMG from "../Image/Profile.png";
+import IMG from "../Image/image-removebg-preview.png";
 
 export default function Profile() {
   const inputRef = useRef(null);

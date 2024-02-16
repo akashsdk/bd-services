@@ -8,7 +8,7 @@
 }
 /* Left-Side */
 .Profile-Body-Left {
-  flex: 1;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,10 +97,11 @@
 
 /* Right-Side */
 .Profile-Body-Right {
-  flex: 1;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .Profile-Right-Box{
   height: auto;
@@ -217,4 +218,16 @@
   font-size: 18px;
   border-radius: 5px;
   opacity: .6;
+}
+
+@media only screen and (max-width: 800px) {
+  .Profile-Body {
+    flex-direction: column;
+  }
+  .Profile-Body-Left {
+    width: 100%;
+  }
+  .Profile-Body-Right {
+    width: 100%;
+  }
 }

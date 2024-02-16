@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 import Logo from "../Icon/Header logo2 .png";
-import PImg from "../Image/Profile.png";
+import PImg from "../Image/image-removebg-preview.png";
 
 import { Link } from "react-router-dom";
 import { Drawer, Menu, Switch } from "antd";
