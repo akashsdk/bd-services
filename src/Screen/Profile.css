@@ -208,4 +208,13 @@
   margin-top: 20px;
   color: #f42a41;
   cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.Profile-Select{
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  opacity: .6;
 }

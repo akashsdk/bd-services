@@ -1,14 +1,17 @@
 import React, { useState, useRef } from "react";
 import "./Profile.css";
 
-import { Modal, Tooltip, Button } from "antd";
+import { Modal, Tooltip, Button, Input } from "antd";
 import {
   UploadOutlined,
   DeleteOutlined,
   LogoutOutlined,
   ContactsOutlined,
-  SendOutlined,
   PlusCircleOutlined,
+  UserOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  EnvironmentOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
@@ -48,33 +51,36 @@ export default function Profile() {
   };
 
   // For Right Side
+
   const [users, setUsers] = useState([
-    { id: 1, name: "Mr. X", type: "/Family", phone: "(017******90)"},
-    { id: 2, name: "Mr. Y", type: "/Friend", phone: "(015******76)" },
-    { id: 3, name: "Mr. Z", type: "/Family", phone: "(018******01)" },
+    {
+      id: 1,
+      name: "Mr. X",
+      relation: "Family",
+      phone: "(017******90)",
+      email: "",
+      address: "",
+    },
+    {
+      id: 2,
+      name: "Mr. Y",
+      relation: "Friend",
+      phone: "(015******76)",
+      email: "",
+      address: "",
+    },
+    {
+      id: 3,
+      name: "Mr. Z",
+      relation: "Family",
+      phone: "(018******01)",
+      email: "",
+      address: "",
+    },
   ]);
 
   const handleDeleteUser = (userId) => {
     setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
-  };
-
-  const handleSendUser = () => {
-    const name = document.getElementById("nameInput").value;
-    const type = document.getElementById("typeInput").value;
-
-    if (name && type) {
-      const newUser = {
-        id: users.length + 1,
-        name: name,
-        type: type,
-      };
-
-      setUsers((prevUsers) => [...prevUsers, newUser]);
-      document.getElementById("nameInput").value = "";
-      document.getElementById("typeInput").value = "";
-    } else {
-      alert("Please fill in both Name and Type fields.");
-    }
   };
 
   // for all Delete
@@ -90,14 +96,61 @@ export default function Profile() {
     setIsModalOpen2(false);
   };
 
+  const [newUser, setNewUser] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    relation: "",
+    address: "",
+  });
+
+  // Function to handle changes in the new user details
+  const handleNewUserChange = (field, value) => {
+    setNewUser((prevUser) => ({ ...prevUser, [field]: value }));
+  };
+
+  // Function to handle adding a new user
+  const handleAddUser = () => {
+    if (
+      newUser.name &&
+      newUser.email &&
+      newUser.phone &&
+      newUser.relation &&
+      newUser.address &&
+      users.length < 3
+    ) {
+      setUsers((prevUsers) => [
+        ...prevUsers,
+        {
+          id: prevUsers.length + 1,
+          name: newUser.name,
+          relation: newUser.relation,
+          phone: newUser.phone,
+          email: newUser.email,
+          address: newUser.address,
+        },
+      ]);
+      // Reset the new user details
+      setNewUser({
+        name: "",
+        email: "",
+        phone: "",
+        relation: "",
+        address: "",
+      });
+      // Close the modal
+      setIsModalOpen3(false);
+    }
+  };
+
+  const isMaxUsersReached = users.length === 3;
+
   // for Add account
   const [isModalOpen3, setIsModalOpen3] = useState(false);
   const showModal3 = () => {
     setIsModalOpen3(true);
   };
-  const handleOk3 = () => {
-    setIsModalOpen3(false);
-  };
+
   const handleCancel3 = () => {
     setIsModalOpen3(false);
   };
@@ -183,7 +236,9 @@ export default function Profile() {
                 <img alt="" src={IMG} className="Profile-Right-Img" />
                 <div className="Profile-Right-Div3">
                   <p className="Profile-Title-Text2">{user.name}</p>
-                  <p className="Profile-Title-Text3">{user.type} {user.phone}</p>
+                  <p className="Profile-Title-Text3">
+                    /{user.relation} ({user.phone})
+                  </p>
                 </div>
                 <DeleteOutlined
                   className="Profile-Title-Icon"
@@ -191,6 +246,10 @@ export default function Profile() {
                 />
               </div>
             ))}
+
+            <p style={{ color: isMaxUsersReached ? "red" : "green", marginBottom:'0px' }}>
+              You can add max 3 people
+            </p>
 
             <button className="Profile-Right-AddButton" onClick={showModal3}>
               <PlusCircleOutlined className="Profile-Title-Icon2" />
@@ -201,17 +260,6 @@ export default function Profile() {
               <DeleteOutlined className="Profile-Title-Icon2" />
               <p className="Profile-Title-Text2">Remove of all accounts</p>
             </button>
-
-            {/* Input for image, two text inputs, and a send icon */}
-            <div className="Profile-Right-Div2">
-              <input type="file" accept="image/*" />
-              <input id="nameInput" type="text" placeholder="Name" />
-              <input id="typeInput" type="text" placeholder="Type" />
-              <SendOutlined
-                className="Profile-Title-Icon"
-                onClick={handleSendUser}
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -234,18 +282,75 @@ export default function Profile() {
         <Modal
           title="Add another account"
           open={isModalOpen3}
-          onOk={handleOk3}
+          onOk={handleAddUser} // Call handleAddUser when OK button is clicked
           onCancel={handleCancel3}
           footer={[
             <Button key="back" onClick={handleCancel3}>
-              Return
+              Back
             </Button>,
-            <Button key="submit" type="primary" onClick={handleOk3}>
+            <Button key="submit" type="primary" onClick={handleAddUser}>
               Submit
             </Button>,
           ]}
         >
-          <div>ghjhg</div>
+          <div>
+            <Input
+              id="nameInput"
+              type="text"
+              size="large"
+              placeholder="Name"
+              prefix={<UserOutlined />}
+              value={newUser.name}
+              onChange={(e) => handleNewUserChange("name", e.target.value)}
+            />
+            <br />
+            <br />
+
+            <Input
+              size="large"
+              placeholder="Email"
+              prefix={<MailOutlined />}
+              value={newUser.email}
+              onChange={(e) => handleNewUserChange("email", e.target.value)}
+            />
+            <br />
+            <br />
+            <Input
+              size="large"
+              placeholder="Phone"
+              prefix={<PhoneOutlined />}
+              value={newUser.phone}
+              onChange={(e) => handleNewUserChange("phone", e.target.value)}
+            />
+            <br />
+            <br />
+            <select
+              className="Profile-Select"
+              id="relationInput"
+              value={newUser.relation}
+              onChange={(e) => handleNewUserChange("relation", e.target.value)}
+            >
+              <option value="">Relationship</option>
+              <option value="Husband">Husband</option>
+              <option value="Wife">Wife</option>
+              <option value="Father">Father</option>
+              <option value="Mother">Mother</option>
+              <option value="Brother">Brother</option>
+              <option value="Sister">Sister</option>
+              <option value="Other's Family">Other's Family</option>
+              <option value="Friend">Friend</option>
+              <option value="Other's">Other's</option>
+            </select>
+            <br />
+            <br />
+            <Input
+              size="large"
+              placeholder="Address"
+              prefix={<EnvironmentOutlined />}
+              value={newUser.address}
+              onChange={(e) => handleNewUserChange("address", e.target.value)}
+            />
+          </div>
         </Modal>
       </box>
     </div>
