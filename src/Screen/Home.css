@@ -2,10 +2,42 @@
   height: auto;
   width: 100%;
 }
+
+/* Box-1 */
 .home-Box1{
   height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home-Box1-Left{
+  height: auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f42a41;
+}
+.home-Box1-Right{
+  height: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-Box1-Button{
+  border: none;
+  color: #006a4e;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-Box1-Img{
+  height: 400px;
+  width: 80%;
+}
+.home-Box1-Button:hover .home-Box1-Icon{
+  color: #f42a41;
 }
