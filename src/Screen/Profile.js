@@ -298,7 +298,7 @@ export default function Profile() {
               id="nameInput"
               type="text"
               size="large"
-              placeholder="Name"
+              placeholder="Name*"
               prefix={<UserOutlined />}
               value={newUser.name}
               onChange={(e) => handleNewUserChange("name", e.target.value)}
@@ -308,7 +308,7 @@ export default function Profile() {
 
             <Input
               size="large"
-              placeholder="Email"
+              placeholder="Email*"
               prefix={<MailOutlined />}
               value={newUser.email}
               onChange={(e) => handleNewUserChange("email", e.target.value)}
@@ -317,7 +317,7 @@ export default function Profile() {
             <br />
             <Input
               size="large"
-              placeholder="Phone"
+              placeholder="Phone*"
               prefix={<PhoneOutlined />}
               value={newUser.phone}
               onChange={(e) => handleNewUserChange("phone", e.target.value)}
@@ -330,7 +330,7 @@ export default function Profile() {
               value={newUser.relation}
               onChange={(e) => handleNewUserChange("relation", e.target.value)}
             >
-              <option value="">Relationship</option>
+              <option value="">Relationship*</option>
               <option value="Husband">Husband</option>
               <option value="Wife">Wife</option>
               <option value="Father">Father</option>
@@ -345,7 +345,7 @@ export default function Profile() {
             <br />
             <Input
               size="large"
-              placeholder="Address"
+              placeholder="Address*"
               prefix={<EnvironmentOutlined />}
               value={newUser.address}
               onChange={(e) => handleNewUserChange("address", e.target.value)}
