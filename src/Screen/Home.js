@@ -14,6 +14,7 @@ import Icon4 from "../Icon/policeman (1).png";
 import Icon6 from "../Icon/ambulance.png";
 import Icon7 from "../Icon/women.png";
 import Icon8 from "../Icon/investigation.png";
+import HomeHeader from "../Cart/HomeHeader";
 
 export default function Home() {
   // Box-1
@@ -302,6 +303,17 @@ export default function Home() {
         <p className="home-Box2-Text4">
           Note: Please do not waste valuable time with unnecessary calls.
         </p>
+      </div>
+
+      {/* Box-3 */}
+      <div>
+        <p>Box-3</p>
+      </div>
+
+      {/* Box-4 */}
+      <div style={{width:'100%'}}>
+        <p>Box-4</p>
+        <HomeHeader/>
       </div>
     </div>
   );
