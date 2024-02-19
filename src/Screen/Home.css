@@ -179,7 +179,14 @@
 }
 
 /* Box-3 */
-
+.home-Box3 {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 /* Box-4 */
 .home-Box4 {
   height: auto;
@@ -194,6 +201,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Box-5 */
+.home-Box5 {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Box-6 */
+.home-Box6 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e7fdf8;
 }
 
 @media only screen and (max-width: 1200px) {

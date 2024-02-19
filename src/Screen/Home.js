@@ -320,7 +320,7 @@ export default function Home() {
       </div>
 
       {/* Box-3 */}
-      <div>
+      <div className="home-Box5">
         <p>Box-3</p>
       </div>
 
@@ -387,15 +387,16 @@ export default function Home() {
             bodyText=""
           />
         </div>
+        <div style={{height:'50px'}} />
       </div>
 
       {/* Box-5 */}
-      <div>
+      <div className="home-Box5">
         <p>Box-5</p>
       </div>
 
       {/* Box-6 */}
-      <div>
+      <div className="home-Box6">
         <p>Box-6</p>
       </div>
     </div>
