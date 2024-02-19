@@ -74,6 +74,13 @@
   font-weight: 700;
   color: #006a4e;
 }
+.home-Box1-Text2 {
+  display: none;
+  font-size: 35px;
+  font-weight: 700;
+  color: #006a4e;
+  margin-bottom: -10px;
+}
 
 .home-Box1-Right {
   height: auto;
@@ -221,41 +228,45 @@
   align-items: center;
   background-color: #e7fdf8;
 }
-.home-Box6-Box1{
-  width: 40%;
+.home-Box6-Box1 {
+  width: 50%;
 }
-.home-Box6-Box2{
-  width: 30%;
+.home-Box6-Box2 {
+  width: 50%;
 }
-.home-Box6-Box3{
-  width: 30%;
-}
-.home-Box6-Img{
+.home-Box6-Img {
   height: 350px;
 }
-.home-Box6-Text1{
+.home-Box6-Icon3 {
+  height: 150px;
+}
+.home-Box6-Text1 {
   font-size: 35px;
   font-weight: 700;
 }
-.home-Box6-Text2{
+.home-Box6-Text2 {
   font-size: 20px;
   color: #fc8e9a;
 }
-.home-Box6-Button{
+.home-Box6-Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-Box6-Button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.home-Box6-Icon{
+.home-Box6-Icon {
   height: 80px;
   width: 230px;
 }
-.home-Box6-Icon2{
+.home-Box6-Icon2 {
   height: 68px;
   width: 220px;
   border-radius: 10px;
 }
-
 
 @media only screen and (max-width: 1200px) {
   .home-Header-body {
@@ -280,6 +291,9 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .home-Box1{
+    flex-direction: column;
+  }
   .home-Box1-Left {
     display: none;
   }
@@ -292,12 +306,27 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-
+  .home-Box1-Text2{
+    display: block;
+  }
   .home-Box2-Div {
     width: 97%;
   }
   .home-Box4-Box {
     flex-direction: column;
+  }
+  .home-Box6 {
+    height: auto;
+    flex-direction: column;
+  }
+  .home-Box6-Box1 {
+    width: 100%;
+  }
+  .home-Box6-Box2 {
+    width: 100%;
+  }
+  .home-Box6-Icon3 {
+    display: none;
   }
 }
 
@@ -306,6 +335,9 @@
     height: 250px;
     margin-left: 0px;
     margin-right: 0px;
+  }
+  .home-Box1-Text2{
+    font-size: 25px;
   }
   .home-Header-div {
     width: 100%;
@@ -320,5 +352,24 @@
   }
   .home-Header-Button {
     width: 90%;
+  }
+
+  .home-Box6-Img {
+    height: 250px;
+  }
+  .home-Box6-Text1 {
+    font-size: 25px;
+  }
+  .home-Box6-Text2 {
+    font-size: 18px;
+  }
+  .home-Box6-Icon {
+    height: 60px;
+    width: auto;
+  }
+  .home-Box6-Icon2 {
+    height: 52px;
+    width: auto;
+    border-radius: 10px;
   }
 }

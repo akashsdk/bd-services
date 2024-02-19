@@ -18,6 +18,7 @@ import Icon6 from "../Icon/ambulance.png";
 import Icon7 from "../Icon/women.png";
 import Icon8 from "../Icon/investigation.png";
 import HomeHeader from "../Cart/HomeHeader";
+import Icon9 from "../Icon/Header logo.png";
 
 export default function Home() {
   // Box-1
@@ -150,6 +151,9 @@ export default function Home() {
             onClick={handleNext}
           />
         </div>
+        <p className="home-Box1-Text2">
+            বঙ্গবন্ধুর দেশে বাংলাদেশে
+          </p>
       </div>
 
       {/* Box-2 */}
@@ -404,12 +408,13 @@ export default function Home() {
           <img className="home-Box6-Img" src={Photo2} alt="" />
         </div>
         <div className="home-Box6-Box2">
+          <img className="home-Box6-Icon3" src={Icon9} alt="" />
           <p className="home-Box6-Text1">DOWNLOAD MOBILE APP</p>
           <p className="home-Box6-Text2">
             To Get Better Experience <br />
             In Your Mobile Device
           </p>
-          <div>
+          <div className="home-Box6-Div">
             <button className="home-Box6-Button">
               <img src={Photo3} className="home-Box6-Icon" alt="" />
             </button>
@@ -419,7 +424,11 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="home-Box6-Box3">Box2</div>
+      </div>
+
+      {/* Box-7 */}
+      <div className="home-Box5">
+        <p>Box-7</p>
       </div>
     </div>
   );
