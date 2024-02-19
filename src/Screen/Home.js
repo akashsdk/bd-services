@@ -350,7 +350,6 @@ export default function Home() {
             topText="Police"
             bodyText="Bangladesh Police provides vigilant protection, maintains law and order, and ensures public safety. Committed to serving the community, they respond promptly to emergencies, ensuring citizens' security and welfare."
           />
-
           <HomeHeader
             phoneNum="+8801321100152"
             icon={Icon5}
@@ -388,6 +387,16 @@ export default function Home() {
             bodyText=""
           />
         </div>
+      </div>
+
+      {/* Box-5 */}
+      <div>
+        <p>Box-5</p>
+      </div>
+
+      {/* Box-6 */}
+      <div>
+        <p>Box-6</p>
       </div>
     </div>
   );
