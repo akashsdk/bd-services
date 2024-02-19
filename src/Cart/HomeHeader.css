@@ -95,13 +95,17 @@
   .HomeHeader-Cart-Div2 {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: row;
   }
   .HomeHeader-Cart-Icon {
     height: 70px;
   }
   .HomeHeader-Cart-Div3 {
     width: 30%;
+  }
+  .HomeHeader-Cart-Div {
+    margin-top: -30px;
   }
   .HomeHeader-Cart-Text2 {
     margin-top: 20px;

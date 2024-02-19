@@ -60,13 +60,63 @@ export default function Home() {
     }
   };
   // box-4
-  const boxStyle = {
-    width: "100%",
-  };
+
   return (
     <div className="home-body">
       {/* Box-0 (Header) */}
-     
+      <div className="home-Header-body">
+        <div className="home-Header-div2">
+          <div className="home-Header-div">
+            <button className="home-Header-Button">
+              <img src={Icon1} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">Emergency</p>
+            </button>
+
+            <button className="home-Header-Button">
+              <img src={Icon2} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">Fire Service</p>
+            </button>
+          </div>
+
+          <div className="home-Header-div">
+            <button className="home-Header-Button">
+              <img src={Icon3} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">Police</p>
+            </button>
+
+            <button className="home-Header-Button">
+              <img src={Icon4} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">RAB</p>
+            </button>
+          </div>
+        </div>
+
+        <div className="home-Header-div2">
+          <div className="home-Header-div">
+            <button className="home-Header-Button">
+              <img src={Icon5} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">CID</p>
+            </button>
+
+            <button className="home-Header-Button">
+              <img src={Icon6} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">Ambulance</p>
+            </button>
+          </div>
+
+          <div className="home-Header-div">
+            <button className="home-Header-Button">
+              <img src={Icon7} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">Women & Children</p>
+            </button>
+
+            <button className="home-Header-Button">
+              <img src={Icon8} className="home-Header-Icon" alt="" />
+              <p className="home-Header-Text">দুদক</p>
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Box-1 */}
       <div className="home-Box1">
@@ -275,8 +325,9 @@ export default function Home() {
       </div>
 
       {/* Box-4 */}
-      <div style={{ width: "100%", display:'flex', flexDirection:'column' ,}}>
-        <p>Box-4</p>
+      <div className="home-Box4">
+        <p className="home-Box2-Text1">Emergency Service</p>
+        <div className="home-Box4-Box">
           <HomeHeader
             phoneNum="+8801321100152"
             icon={Icon1}
@@ -296,7 +347,7 @@ export default function Home() {
           <HomeHeader
             phoneNum="+8801321100152"
             icon={Icon3}
-            topText="Fire Service"
+            topText="Police"
             bodyText="Bangladesh Police provides vigilant protection, maintains law and order, and ensures public safety. Committed to serving the community, they respond promptly to emergencies, ensuring citizens' security and welfare."
           />
 
@@ -306,6 +357,37 @@ export default function Home() {
             topText="RAB"
             bodyText="Rapid Action Battalion (RAB), a specialized force within Bangladesh Police, ensures swift responses to combat crime, terrorism, and uphold public safety with efficiency, dedication, and advanced tactics."
           />
+        </div>
+
+        <div className="home-Box4-Box">
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon5}
+            topText="CID"
+            bodyText="Bangladesh CID (Criminal Investigation Department) serves customers by investigating complex crimes, ensuring justice, and upholding law and order through diligent and meticulous investigative procedures."
+          />
+
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon6}
+            topText="Ambulance"
+            bodyText="Bangladesh Ambulance Service swiftly transports people in emergencies, providing critical medical care. Their prompt response and skilled teams save lives, ensuring health and safety for all."
+          />
+
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon7}
+            topText="Women & Children"
+            bodyText="Bangladesh prioritizes women and children's safety, fostering a protective environment. Dedicated initiatives and support networks ensure their well-being, empowering a secure and thriving community for all."
+          />
+
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon8}
+            topText="দুদক"
+            bodyText=""
+          />
+        </div>
       </div>
     </div>
   );
