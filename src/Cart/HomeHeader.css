@@ -1,9 +1,9 @@
 .HomeHeader-Cart-Body {
-  height: 450px;
-  width: 350px;
+  height: 600px;
+  width: 300px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
-  background-color: #e7fdf8;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,30 +12,171 @@
   padding: 10px;
 }
 .HomeHeader-Cart-Body:hover {
-    box-shadow: #006a4e 0px 3px 8px;
-  }
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
 .HomeHeader-Cart-Icon {
   height: 100px;
 }
 .HomeHeader-Cart-Text1 {
+  margin-top: 0px;
   font-size: 30px;
   color: #f42a41;
   font-weight: 600;
 }
-.HomeHeader-Cart-Text2{
-    margin-top: -10px;
-    text-align: justify;
-    width: 90%;
+.HomeHeader-Cart-Text2 {
+  margin-top: -10px;
+  text-align: justify;
+  width: 90%;
 }
-.HomeHeader-Cart-Button{
-    height: 120px;
-    width: 120px;
-    border: none;
-    border-radius: 60px;
-    display: flex;
+.HomeHeader-Cart-Button {
+  height: 120px;
+  width: 120px;
+  border: none;
+  border-radius: 60px;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.HomeHeader-Cart-Progress {
+  display: none;
+}
+.HomeHeader-Cart-Button:hover .HomeHeader-Cart-Progress {
+  display: flex;
 }
 
+.HomeHeader-Cart-Text3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #006a4e;
+}
+.HomeHeader-Cart-Button:hover .HomeHeader-Cart-Text3 {
+  display: none;
+}
+.HomeHeader-Cart-Div2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.HomeHeader-Cart-Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomeHeader-Cart-Text4 {
+  color: #f42a41;
+  opacity: 0.6;
+}
+.HomeHeader-Cart-Icon2 {
+  opacity: 0.6;
+  margin-left: 5px;
+  transform: rotate(110deg);
+}
+.HomeHeader-Cart-Text5 {
+  opacity: 0.6;
+  margin-top: 37px;
+  margin-left: 0px;
+}
+.HomeHeader-Cart-Text6 {
+  display: none;
+}
+.HomeHeader-Cart-Icon3 {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .HomeHeader-Cart-Body {
+    height: 240px;
+    width: 80%;
+  }
+  .HomeHeader-Cart-Div2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .HomeHeader-Cart-Icon {
+    height: 70px;
+  }
+  .HomeHeader-Cart-Div3 {
+    width: 30%;
+  }
+  .HomeHeader-Cart-Text2 {
+    margin-top: 20px;
+    text-align: justify;
+    width: 40%;
+  }
+  .HomeHeader-Cart-Button {
+    margin-left: 5%;
+  }
+  .HomeHeader-Cart-Icon {
+    margin-top: 0px;
+  }
+  .HomeHeader-Cart-Text1 {
+    margin-top: 0px;
+    margin-bottom: -20px;
+  }
+
+  .HomeHeader-Cart-Text4 {
+    margin-top: 37px;
+  }
+  .HomeHeader-Cart-Icon2 {
+    margin-top: 20px;
+  }
+  .HomeHeader-Cart-Text5 {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .HomeHeader-Cart-Body {
+    height: 240px;
+    width: 95%;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 20px;
+  }
+  .HomeHeader-Cart-Div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .HomeHeader-Cart-Icon {
+    display: none;
+  }
+  .HomeHeader-Cart-Icon3{
+    display: block;
+    font-size: 35px;
+    margin-left: -15px;
+    margin-bottom: 25px;
+  }
+  
+  .HomeHeader-Cart-Icon3:hover {
+    color: #f42a41;
+  }
+  .HomeHeader-Cart-Text1 {
+    font-size: 25px;
+    margin-left: -15px;
+  }
+  .HomeHeader-Cart-Text2 {
+    width: 60%;
+  }
+  .HomeHeader-Cart-Button {
+    display: none;
+  }
+
+  .HomeHeader-Cart-Div {
+    margin-top: -30px;
+  }
+  .HomeHeader-Cart-Text5 {
+    display: none;
+  }
+  .HomeHeader-Cart-Text6 {
+    display: block;
+    margin-left: 5px;
+    margin-top: 37px;
+    opacity: 0.6;
+  }
+}

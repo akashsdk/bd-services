@@ -59,50 +59,14 @@ export default function Home() {
       window.location.href = phoneNumber;
     }
   };
+  // box-4
+  const boxStyle = {
+    width: "100%",
+  };
   return (
     <div className="home-body">
       {/* Box-0 (Header) */}
-      <div className="home-Header-body">
-        <button className="home-Header-Button">
-          <img src={Icon1} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">Emergency</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon2} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">Fire Service</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon3} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">Police</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon4} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">RAB</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon5} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">CID</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon6} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">Ambulance</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon7} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">Women & Children</p>
-        </button>
-
-        <button className="home-Header-Button">
-          <img src={Icon8} className="home-Header-Icon" alt="" />
-          <p className="home-Header-Text">দুদক</p>
-        </button>
-      </div>
+     
 
       {/* Box-1 */}
       <div className="home-Box1">
@@ -311,9 +275,37 @@ export default function Home() {
       </div>
 
       {/* Box-4 */}
-      <div style={{width:'100%'}}>
+      <div style={{ width: "100%", display:'flex', flexDirection:'column' ,}}>
         <p>Box-4</p>
-        <HomeHeader/>
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon1}
+            topText="Emergency"
+            bodyText="Bangladesh Emergency 999 service provides swift assistance to customers
+          in crisis, ensuring rapid response and support during emergencies,
+          fostering a safer and secure environment."
+          />
+
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon2}
+            topText="Fire Service"
+            bodyText="Bangladesh Fire Service ensures rapid response and expert assistance during emergencies, safeguarding lives and property through skilled firefighting and rescue operations, ensuring public safety and well-being."
+          />
+
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon3}
+            topText="Fire Service"
+            bodyText="Bangladesh Police provides vigilant protection, maintains law and order, and ensures public safety. Committed to serving the community, they respond promptly to emergencies, ensuring citizens' security and welfare."
+          />
+
+          <HomeHeader
+            phoneNum="+8801321100152"
+            icon={Icon5}
+            topText="RAB"
+            bodyText="Rapid Action Battalion (RAB), a specialized force within Bangladesh Police, ensures swift responses to combat crime, terrorism, and uphold public safety with efficiency, dedication, and advanced tactics."
+          />
       </div>
     </div>
   );
