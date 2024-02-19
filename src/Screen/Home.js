@@ -5,6 +5,9 @@ import { RightOutlined, LeftOutlined, PhoneOutlined } from "@ant-design/icons";
 import { Button, Flex, Tooltip } from "antd";
 
 import Photo1 from "../Image/sheikh-mujibur-rahman.jpeg";
+import Photo2 from "../Image/image-removebg-preview (1).png";
+import Photo3 from "../Image/App(google).png";
+import Photo4 from "../Image/App store.png";
 
 import Icon1 from "../Icon/999.png";
 import Icon2 from "../Icon/fire-extinguisher.png";
@@ -387,7 +390,7 @@ export default function Home() {
             bodyText=""
           />
         </div>
-        <div style={{height:'50px'}} />
+        <div style={{ height: "50px" }} />
       </div>
 
       {/* Box-5 */}
@@ -397,7 +400,26 @@ export default function Home() {
 
       {/* Box-6 */}
       <div className="home-Box6">
-        <p>Box-6</p>
+        <div className="home-Box6-Box1">
+          <img className="home-Box6-Img" src={Photo2} alt="" />
+        </div>
+        <div className="home-Box6-Box2">
+          <p className="home-Box6-Text1">DOWNLOAD MOBILE APP</p>
+          <p className="home-Box6-Text2">
+            To Get Better Experience <br />
+            In Your Mobile Device
+          </p>
+          <div>
+            <button className="home-Box6-Button">
+              <img src={Photo3} className="home-Box6-Icon" alt="" />
+            </button>
+
+            <button className="home-Box6-Button">
+              <img src={Photo4} className="home-Box6-Icon2" alt="" />
+            </button>
+          </div>
+        </div>
+        <div className="home-Box6-Box3">Box2</div>
       </div>
     </div>
   );

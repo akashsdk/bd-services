@@ -214,14 +214,48 @@
 
 /* Box-6 */
 .home-Box6 {
-  height: auto;
+  height: 500px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background-color: #e7fdf8;
 }
+.home-Box6-Box1{
+  width: 40%;
+}
+.home-Box6-Box2{
+  width: 30%;
+}
+.home-Box6-Box3{
+  width: 30%;
+}
+.home-Box6-Img{
+  height: 350px;
+}
+.home-Box6-Text1{
+  font-size: 35px;
+  font-weight: 700;
+}
+.home-Box6-Text2{
+  font-size: 20px;
+  color: #fc8e9a;
+}
+.home-Box6-Button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.home-Box6-Icon{
+  height: 80px;
+  width: 230px;
+}
+.home-Box6-Icon2{
+  height: 68px;
+  width: 220px;
+  border-radius: 10px;
+}
+
 
 @media only screen and (max-width: 1200px) {
   .home-Header-body {
